@@ -1,0 +1,18 @@
+.explanation {
+    width: 700px;
+}
+
+table td {
+    text-align: center;
+}
+
+#main {
+    width: 750px;
+    display: inline-block;
+}
+
+#menubar {
+    width: 300px;
+    height: 1000px;
+    display: inline-block;
+}

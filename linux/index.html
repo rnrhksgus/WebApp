@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>linux</title>
+        <link rel="stylesheet" href="linux.css">
+    </head>
+    <body>
+        <h1><a href = "https://rnrhksgus.github.io/Web/">Koo Web</a></h1>
+        <h1>Linux 정리</h1>
+        <hr />
+        <div id="main">
+            <div id="#chmod">
+                <dt><h3>chmod</h3></dt>
+                <dd><p>파일의 퍼미션을 변경하기 위한 명령어</p></dd>
+                <div style="width:350px; border:1px solid black; margin-left:40px">
+                    <p>&nbsp;# ls -l lin.txt</p>
+                    <p>&nbsp;--w-------. joon ihd 513 Dec 22 21:05 lin.txt</p>
+                    <p>&nbsp;# chmod 775 lin.txt</p>
+                    <p>&nbsp;-rwxrwxr-x. joon ihd 513 Dec 22 21:05 lin.txt</p>
+                </div>
+            </div>
+            <div id="#chown">
+                <dt><h3>chown</h3></dt>
+                <dd><p>파일의 소유자나 소유 그룹을 변경하기 위한 명령어</p></dd>
+                <div style="margin-left:40px">
+                    <dt><p><strong>사용자 변경</strong></p></dt>
+                    <dd><p>chown 사용자명 대상</p></dd>
+                    <dt><p><strong>그룹 변경</strong></p></dt>
+                    <dd><p>chown :그룹 대상</p></dd>
+                    <dt><p><strong>사용자 + 그룹 변경</strong></p></dt>
+                    <dd><p>chown 사용자명:그룹 대상</p></dd>
+                </div>
+                <div style="width:350px; border:1px solid black; margin-left:40px">
+                    <p>&nbsp;# ls -l lin.txt</p>
+                    <p>&nbsp;--w-------. joon ihd 513 Dec 22 21:05 lin.txt</p>
+                    <p>&nbsp;# chown :kait lin.txt</p>
+                    <p>&nbsp;# ls -l lin.txt</p>
+                    <p>&nbsp;-rwxrwxrwx. joon kait 513 Dec 22 21:05 lin.txt</p>
+                </div>
+            </div>
+            <div id="#chgrp">
+                <dt><h3>chgrp</h3></dt>
+                <dd><p>파일의 사용자 그룹을 변경하기 위한 명령어</p></dd>
+                <div style="width:350px; border:1px solid black; margin-top:10px; margin-left:40px">
+                    <p>&nbsp;# ls -l lin.txt</p>
+                    <p>&nbsp;--w-------. joon ihd 513 Dec 22 21:05 lin.txt</p>
+                    <p>&nbsp;# chgrp kait lin.txt</p>
+                    <p>&nbsp;# ls -l lin.txt</p>
+                    <p>&nbsp;-rwxrwxrwx. joon kait 513 Dec 22 21:05 lin.txt</p>
+                </div>
+            </div>
+            <div id="#tar">
+                <dt><h3>tar</h3></dt>
+                <dd><p>tar는 리눅스 파일시스템을 압축하는 명령어</p></dd>
+                <dd><p>tar -cvf [파일명.tar] [파일명] : .tar로 압축</p></dd>
+                <dd><p>tar -xvf [파일명.tar] : .tar 압축 해제</p></dd>
+                <dd><p>tar -zcvf [파일명.tar.gz] [폴더명] : .tar.gz로 압축</p></dd>
+                <dd><p>tar -zxvf [파일명.tar.gz] : .tar.gz 압축 해제</p></dd>
+                <dd><p>tar -rvf [파일명.tar] [파일명] : 기존 압축에 새파일 추가</p></dd>
+                <dd><p>tar -tvf [파일명.tar] : 내용확인</p></dd>
+            </div>
+            <div class="explanation" id="#emacs">
+                <dt><h3>emacs</h3></dt>
+                <dd><p>리처드 스톨만이 매크로 기능이 있는 텍스트 교정 및 편집기로 개발하였다.
+                     이후 제임스 고슬링이 LISP 언어에 의한 환경 설정 및 에디터의 기능을
+                     확장 시킬 수 있는 기능을 포함하여 배포하였다. 기능이 너무 많아 대응하는
+                     LISP 코드를 불러 오는데에 오랜 시간이 걸리고 초보자가 사용하기 힘들다.</p></dd>
+            </div>
+            <div class="explanation" id="#pico">
+                <dt><h3>pico</h3></dt>
+                <dd><p> </p></dd>
+            </div>
+
+            <div id="#vi_editor">
+                <dt><h3>vi editor</h3></dt>
+                <dd><p>emacs 및 pico와 유사하게 셸 명령행에서 'vi [파일명]' 이라 입력</p></dd>
+                <dd><p>vi는 다른 편집기들과 다르게 모드(mode)형 편집기</p></dd>
+                <ul>
+                    <li><dt><p><strong>명령모드</strong></p></dt></li>
+                    <dd><p>커서의 이동, 수정, 삭제, 복사, 붙이기, 탐색</p></dd>
+                    <dd><p>입력모드에서 [Esc]키를 누르면 명령모드로 전환</p></dd>
+                    <li><dt><p><strong>입력모드</strong></p></dt></li>
+                    <dd><p>명령모드에서 i, a, o, I, A, O 등을 누르면 입력모드로 전환</p></dd>
+                    <dd><p>글자를 입력하는 문서를 만드는 모드</p></dd>
+                    <dd><p>화면 아래에 --INSERT--라 표시</p></dd>
+                    <li><dt><p><strong>콜론모드</strong></p></dt></li>
+                    <dd><p>명령모드에서 ':' 키를 입력했을 때 화면 맨 아랫줄에서 명령을 수행하는 모드</p></dd>
+                    <dd><p>저장, 종료, 탐색, 치환 및 vi 환경설정</p></dd>
+                </ul>
+            </div>
+            <div class="explanation" id="#icann">
+                <dt><h3>ICANN</h3></dt>
+                <dd><p>1998년에 설립된 기관으로 인터넷, 도메인 이름, IP 주소, 프로토콜의 범주와
+                    포트번호 할당, DNS관련 기능 감독, 도메인 분쟁의 조율과 중재 등을 담당한다.</p></dd>
+            </div>
+            <div class="explanation" id="#rfc">
+                <dt><h3>RFC</h3></dt>
+                <dd><p>인터넷에서 기술을 구현하는 데에 필요한 절차 등을 제공하는 공문서 간행물이다.
+                    이 문서 내용의 대부분은 인터넷상에서 기술을 구현함에 있어서 요구되는 상세한 절차와 기본 툴을 제공한다.</p></dd>
+            </div>
+            <div class="explanation" id="#raspberrypi">
+                <dt><h3>라즈베리파이</h3></dt>
+                <dd><p>영국에서 교육용으로 개발된 소형 싱글모드 컴퓨터이다.
+                    저렴한 가격에 그래픽성능이 뛰어나고 Wi-Fi, Bluetooth를 지원하고
+                    다양한 센서 연결을 통한 사물인터넷 환겨 구축이 용이하다. 기본 운영체제로 리눅스가 사용되고 있다.</p></dd>
+            </div>
+            <div class="explanation" id="#arduino">
+                <dt><h3>아두이노</h3></dt>
+                <dd><p>2005년 이탈리아에서 하드웨어에 익숙하지 않는 학생들을 위해 개발되었다.
+                    오픈소스기반 단일보드 마이크로컨트롤러로 다양한 센서를 연결하여 데이터를 전송
+                    할 수 있어 임베디드 시스템 환경 개발이 용이하다. 운영체제로 Linux를 지원한다.</p></dd>
+            </div>
+
+            <div id="#osi">
+                <dt><h3>OSI 7계층</h3></dt>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>계층</th>
+                            <th>이름</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>계층7</td>
+                            <td>응용 계층</td>
+                        </tr>
+                        <tr>
+                            <td>계층6</td>
+                            <td>표현 계층</td>
+                        </tr>
+                        <tr>
+                            <td>계층5</td>
+                            <td>세션 계층</td>
+                        </tr>
+                        <tr>
+                            <td>계층4</td>
+                            <td>전송 계층</td>
+                        </tr>
+                        <tr>
+                            <td>계층3</td>
+                            <td>네트워크 계층</td>
+                        </tr>
+                        <tr>
+                            <td>계층2</td>
+                            <td>데이터 링크 계층</td>
+                        </tr>
+                        <tr>
+                            <td>계층1</td>
+                            <td>물리 계층</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="menubar">
+
+        </div>
+    </body>
+</html>
