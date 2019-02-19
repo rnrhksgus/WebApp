@@ -30,13 +30,13 @@ table td {
     display: block;
     height: 50px;
     line-height: 50px;
-    background-color: #d63f22;
-    color: #ccc;
+    background-color: #fbf9a4;
+    color: black;
     padding: 0 20px;
     border-bottom: 1px solid #bf391f;
 }
 
 .vertical-menu a:hover {
-    background-color: #bf391f;
+    background-color: #FFFF00;
     color: #fff;
 }
