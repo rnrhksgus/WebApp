@@ -35,10 +35,10 @@ table td {
     background-color: #fbf9a4;
     color: black;
     padding: 0;
-    border-bottom: 1px solid #FFFF00;
+    border-bottom: 1px solid black;
 }
 
 .vertical-menu a:hover {
     background-color: #FFFF00;
-    color: #fff;
+    color: black;
 }
