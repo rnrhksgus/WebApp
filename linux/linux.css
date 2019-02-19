@@ -13,6 +13,7 @@ table td {
 
 #menubar {
     display: inline-block;
+    margin-left: 20px;
 }
 
 .vertical-title {
