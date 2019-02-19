@@ -18,7 +18,7 @@ table td {
 }
 
 .vertical-menu {
-    width: 200px;
+    width: 150px;
     margin: 0 auto;
 }
 
@@ -27,13 +27,14 @@ table td {
 }
 
 .vertical-menu a {
+    font-size: 14px;
     text-decoration: none;
     display: block;
     height: 50px;
     line-height: 50px;
     background-color: #fbf9a4;
     color: black;
-    padding: 0 20px;
+    padding: 0;
     border-bottom: 1px solid #FFFF00;
 }
 
