@@ -1,12 +1,12 @@
 table {
-    font-size: 16px;
     margin-left: 40px;
     border-collapse: collapse;
-    padding: 10px;
 }
 
-table td {
+th td {
+    font-size: 16px;
     text-align: center;
+    height: 30px;
 }
 
 #main {
