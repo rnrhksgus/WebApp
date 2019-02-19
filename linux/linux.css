@@ -20,7 +20,7 @@ table td {
     display: inline-block;
     position: fixed;
     top:30px;
-    right : 0;
+    left : 760px;
     margin: 0;
     padding: 0;
 }
