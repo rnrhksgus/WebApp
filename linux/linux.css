@@ -42,8 +42,8 @@ tr {
     list-style-type: none;
     text-align: center;
     font-weight: bolder;
-    height: 50px;
-    line-height: 50px;
+    height: 30px;
+    line-height: 30px;
     background-color: navy;
     color:white;
     border-bottom: 1px solid white;
@@ -65,8 +65,8 @@ tr {
     text-align: center;
     text-decoration: none;
     display: block;
-    height: 50px;
-    line-height: 50px;
+    height: 30px;
+    line-height: 30px;
     background-color: #fbf9a4;
     color: black;
     padding: 0;
