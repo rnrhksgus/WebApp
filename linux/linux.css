@@ -13,6 +13,10 @@ tr {
     height: 30px;
 }
 
+.left {
+    text-align: left;
+}
+
 #main {
     width: 750px;
     display: inline-block;
