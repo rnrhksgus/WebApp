@@ -29,6 +29,7 @@ table td {
     line-height: 50px;
     background-color: navy;
     color:white;
+    border-bottom: 1px solid white;
 }
 
 .vertical-menu {
@@ -39,6 +40,7 @@ table td {
 
 .vertical-menu li {
     list-style-type: none;
+    border-bottom: 1px solid white;
 }
 
 .vertical-menu a {
@@ -51,7 +53,6 @@ table td {
     background-color: #fbf9a4;
     color: black;
     padding: 0;
-    border-bottom: 1px solid white;
 }
 
 .vertical-menu a:hover {
