@@ -9,11 +9,9 @@ table td {
 #main {
     width: 750px;
     display: inline-block;
-    border: 1px solid black;
 }
 
 #menubar {
-    border: 1px solid black;
     display: inline-block;
 }
 
