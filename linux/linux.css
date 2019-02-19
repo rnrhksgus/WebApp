@@ -2,6 +2,10 @@
 
 }
 
+table {
+    margin-left: 40px;
+}
+
 table td {
     text-align: center;
 }
