@@ -24,11 +24,11 @@ table td {
     margin: 0 auto;
 }
 
-.vertical-menu>li {
+.vertical-menu li {
     list-style-type: none;
 }
 
-.vertical-menu>li>a {
+.vertical-menu a {
     text-decoration: none;
     display: block;
     height: 50px;
@@ -39,7 +39,7 @@ table td {
     border-bottom: 1px solid #bf391f;
 }
 
-.vertical-menu>ul>li>a:hover {
+.vertical-menu a:hover {
     background-color: #bf391f;
     color: #fff;
 }
