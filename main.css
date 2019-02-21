@@ -2,7 +2,8 @@ body {
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    background:#f2f4f7
+    background:#f2f4f7;
+    overflow-y: scroll;
 }
 
 div#top {
@@ -36,6 +37,55 @@ h1#top_h1 {
     border: 1px solid #d1d8e4;
 }
 
+div#menu {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 1080px;
+    background: #03ef5d;
+}
+
+.menu_bar {
+    margin: 0;
+    display: inline-block;
+    width: 200px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background: #03ef5d;
+    border: 1px solid #03ef5d;
+}
+
+.menu_bar:hover {
+    background: white;
+    color: black;
+    border: 1px solid #d1d8e4;
+    #sub_menu_bar {visibility: show;}
+}
+
+div#sub_menu {
+    margin: 0 auto;
+    position: absolute;
+    position:
+    width: 1080px;
+    height: 200px;
+    visibility: hidden;
+}
+
+.sub_menu_bar {
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    text-align: center;
+    color: #03ef5d;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
 div#main {
     margin: 0 auto;
     margin-top: 10px;
@@ -44,7 +94,7 @@ div#main {
     grid-template-columns: 220px 1fr;
 }
 
-div#left {
+div#main_left {
     margin: 0;
     width: 210px;
     background: white;
@@ -54,8 +104,8 @@ div#left {
     grid-template-rows: 400px;
 }
 
-div#right {
-    padding-left: 20px;
+div#main_right {
+    padding: 0 20px;
     background: white;
     border: 1px solid #d1d8e4;
 }
@@ -66,7 +116,7 @@ div#bottom {
     width: 1080px;
     height: 100px;
     display: block;
-
+    text-align: center;
     float: bottom;
     background: white;
     border: 1px solid #d1d8e4;
