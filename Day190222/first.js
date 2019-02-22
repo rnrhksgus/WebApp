@@ -172,3 +172,40 @@ console.log(sam3["classification"]["family"]);
 console.log();
 console.log("------------------------------------------------------------------");
 console.log();
+
+var s = "hello";
+console.log(s.toUpperCase());
+s.rating = 3;
+console.log(s.rating);
+
+console.log();
+console.log("------------------------------------------------------------------");
+console.log();
+
+var a1 = [ 1, 2, 3, 4 ];
+var a2 = [ 1, 'two', 3, null ];
+var a3 = [ "contnet1", "contnet2", "contnet3", "contnet4" ];
+var a4 = [ {name:"Ruby", hardness:9}, {name:"Diamond", hardness:10}, {name:"Topaz", hardness:8} ];
+var a5 = [ [ 1, 3, 5 ] , [ 2, 4, 6 ] ];
+
+console.log( a1 );
+console.log( a2 );
+console.log( a3 );
+console.log( a4 );
+console.log( a5 );
+
+var arr = [ 'a', 'b', 'c' ];
+
+console.log( arr );
+console.log( arr.length );
+console.log( arr[0] );
+console.log( arr[ arr.length - 1 ] );
+
+var arr2 = [ 1, 2, 'c', 4, 5 ];
+console.log(arr2);
+arr2[2] = 3;
+console.log(arr2);
+
+console.log();
+console.log("------------------------------------------------------------------");
+console.log();
