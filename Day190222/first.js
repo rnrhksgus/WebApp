@@ -102,11 +102,14 @@ console.log(multiline3);
 console.log(multiline4);
 console.log(multiline5);
 
-
 const result = 3 + '30';
 const result2 = 3 * '30';
 console.log(result);
 console.log(result2);
+
+console.log();
+console.log("------------------------------------------------------------------");
+console.log();
 
 const heating = true;
 const cooling = false;
@@ -128,3 +131,23 @@ console.log(currentTemp2);
 console.log(targetTemp2);
 currentTemp2 = undefined;
 console.log(currentTemp2);
+
+console.log();
+console.log("------------------------------------------------------------------");
+console.log();
+
+var obj = {};
+console.log(obj);
+obj.color= "yellow";
+console.log(obj);
+obj["not an indentifier"] = 3;
+console.log(obj);
+console.log(obj["not an indentifier"]);
+console.log(obj["color"]);
+const SIZE = Symbol();
+obj[SIZE] = 8;
+console.log(obj);
+
+console.log();
+console.log("------------------------------------------------------------------");
+console.log();
