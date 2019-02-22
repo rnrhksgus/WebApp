@@ -16,7 +16,7 @@ console.log("x = " + x);
 console.log("x = " + x);
 
 console.log();
-console.log("---------------------------------");
+console.log("------------------------------------------------------------------");
 console.log();
 
 var count = 10;
@@ -40,7 +40,7 @@ console.log(ninf);
 console.log(nan);
 
 console.log();
-console.log("---------------------------------");
+console.log("------------------------------------------------------------------");
 console.log();
 
 var small = Number.EPSILON;
@@ -60,3 +60,71 @@ console.log(min);
 console.log(nInf);
 console.log(inf2);
 console.log(nan2);
+
+console.log();
+console.log("------------------------------------------------------------------");
+console.log();
+
+var dialog = 'Sam looked up, and sail "hello, old friend", as Max walked in.';
+var imperative = "Don't do that!";
+console.log(dialog);
+console.log(imperative);
+
+var dialog1 = "He looked up and said \"dont'tdo that!\" to Max.";
+var dialog2 = 'He looked up and said "dont\'tdo that!" to Max.';
+console.log(dialog1);
+console.log(dialog2);
+console.log("hello, \norld!!!");
+
+console.log();
+console.log("------------------------------------------------------------------");
+console.log();
+
+var currentTemp = 19.5;
+const message = "The current temperature is" + currentTemp + "\u00b0c";
+const message2 = `The current temperature is ${currentTemp}\u00b0c`;
+console.log(message);
+console.log(message2);
+const multiline = "line1\
+line2";
+const multiline2 = "line1\n\
+line2"
+const multiline3 = "line1\
+line2\
+line3";
+const multiline4 = "line1\n" + "line2\n" + "line3";
+const multiline5 = 'Current temperature: \n' + `\t${currentTemp}\u00b0c\n` +
+"Don't worry... the heat is on!";
+
+console.log(multiline);
+console.log(multiline2);
+console.log(multiline3);
+console.log(multiline4);
+console.log(multiline5);
+
+
+const result = 3 + '30';
+const result2 = 3 * '30';
+console.log(result);
+console.log(result2);
+
+const heating = true;
+const cooling = false;
+console.log(heating);
+console.log(cooling);
+
+const RED = Symbol( "The color of a sunset!" );
+const ORANGE = Symbol( "The color of a sunset!" );
+console.log(RED);
+console.log(ORANGE);
+console.log(RED === ORANGE);
+
+var currentTemp2;
+console.log(currentTemp2);
+
+var targetTemp2 = null;
+currentTemp2 = 19.5
+console.log(currentTemp2);
+console.log(targetTemp2);
+currentTemp2 = undefined;
+console.log(currentTemp2);
