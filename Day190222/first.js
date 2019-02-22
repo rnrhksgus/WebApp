@@ -209,3 +209,24 @@ console.log(arr2);
 console.log();
 console.log("------------------------------------------------------------------");
 console.log();
+
+
+var now = new Date();
+console.log( now );
+var halloween = new Date( 2019, 9, 31 );
+console.log( halloween );
+var halloweenParty = new Date( 2019, 9, 31, 19, 0 );
+console.log( halloweenParty );
+
+console.log( halloweenParty.getFullYear() );
+console.log( halloweenParty.getMonth() );
+console.log( halloweenParty.getDate() );
+console.log( halloweenParty.getDay() );
+console.log( halloweenParty.getHours() );
+console.log( halloweenParty.getMinutes() );
+console.log( halloweenParty.getSeconds() );
+console.log( halloweenParty.getMilliseconds() );
+
+console.log();
+console.log("------------------------------------------------------------------");
+console.log();
