@@ -47,7 +47,7 @@ div#menu {
 .menu_bar {
     margin: 0;
     display: inline-block;
-    width: 200px;
+    width: 150px;
     height: 48px;
     text-align: center;
     line-height: 48px;
@@ -70,7 +70,6 @@ div#sub_menu {
     position: absolute;
     height: 200px;
     width: 820px;
-    border-right: 1px solid red;
     visibility: hidden;
     border-top: 1px solid #d1d8e4;
     background-color: lightskyblue;
@@ -78,7 +77,7 @@ div#sub_menu {
 
 .sub_menu_bar {
     margin: 0;
-    width: 200px;
+    width: 150px;
     height: 200px;
     text-align: center;
     font-size: 18px;
