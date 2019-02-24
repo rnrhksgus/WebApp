@@ -41,18 +41,8 @@ div#menu {
     margin: 0 auto;
     margin-top: 10px;
     width: 1080px;
-    background: navy;
-}
-div#menu_list {
-    display: inline-block;
-    width: 50px;
     height: 50px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-img#image_list {
-    overflow: hidden;
+    background: navy;
 }
 
 .menu_bar {
@@ -113,6 +103,7 @@ div#sub_menu {
 #menu a {
     text-decoration: none;
     color: black;
+    margin: 0px;
 }
 
 div#main {
