@@ -183,6 +183,7 @@ var o8 = {
 console.log("o8.greetBackward() = " + o8.greetBackward());
 console.log("------------------------------------------------------------------");
 
+// 이름이 없는 함수
 var f11 = function(){ return "Hello!!!"; }
 var f11_r = () => "Hello!!!";
 console.log(f11_r());
@@ -194,3 +195,100 @@ console.log(f12_r("Hong"));
 const f13 = function(a, b){ return a + b; }
 const f13_r = (a, b) => a + b;
 console.log(f13_r(5, 10));
+console.log("------------------------------------------------------------------");
+
+var o9 = {
+    name: "Julie",
+    greetBackward: function(){
+        const getReverseName = () => {
+            var nameBackwards = '';
+            for (var i = this.name.length -1; i>=0; --i) {
+                nameBackwards += this.name[i];
+            }
+            return nameBackwards;
+        }
+        return `${getReverseName()} si eman ym, olleH`;
+    }
+}
+
+console.log("o9.greetBackward() = " + o9.greetBackward());
+console.log("------------------------------------------------------------------");
+
+var bruce = {name: "Brace"}
+var madeline = {name: "Madeline"};
+
+function greet(){
+    return `Hello, I'm ${this.name}`;
+}
+
+console.log(greet());
+console.log(greet.call(bruce));
+console.log(greet.call(madeline));
+console.log("------------------------------------------------------------------");
+
+function update(birthYear, ocupation) {
+    this.birthYear = birthYear;
+    this.ocupation = ocupation;
+}
+
+update.call(bruce, 1949, 'singer');
+console.log(bruce);
+update.call(madeline, 1949, 'actress');
+console.log(madeline);
+
+update.apply(bruce, [1955, 'actor']);
+console.log(bruce);
+update.apply(madeline, [1918, 'writer']);
+console.log(madeline);
+console.log("------------------------------------------------------------------");
+
+var xx;
+function fs(xx){
+    return xx + 3;
+}
+console.log(fs(5));
+console.log(xx);
+console.log("------------------------------------------------------------------");
+
+function fs1() { console.log('one'); }
+function fs2() { console.log('two'); }
+
+fs2();
+fs1();
+fs2();
+console.log("------------------------------------------------------------------");
+
+const xxx = 3;
+function fs3(){
+    console.log(xxx);
+    console.log(yyy);
+}
+{
+    var yyy = 5;
+    fs3();
+}
+console.log("------------------------------------------------------------------");
+
+let globalFunc
+{
+    let blockVar = 'a';
+    globalFunc = function() {
+        console.log(blockVar);
+    }
+}
+console.log(typeof globalFunc);
+globalFunc();
+console.log("------------------------------------------------------------------");
+
+let f4;
+{
+    let o = {note: 'Safe'};
+    fs4 = function() { return o; }
+}
+console.log(typeof fs4);
+console.log(fs4());
+let oRef = fs4();
+console.log(typeof oRef);
+console.log(oRef);
+oRef.note = "NOt so safe after all"
+console.log(oRef);
