@@ -44,3 +44,41 @@ sales_num("keboard", 7);
 
 sales_chart(items);
 console.log(items);
+
+console.log("------------------------------------------------------------------");
+
+let item = [{name:"tv",price:5000,sell:5}, {name:"vtr",price:2500,sell:2}, {name:"camera",price:1500,sell:3},
+            {name:"computer",price:4000,sell:6}, {name:"keyboard",price:1000,sell:4}];
+
+function sellprice(item){
+  for(items of item){
+    items.sellprice = items.price*items.sell;
+  }
+}
+function showNormal(item){
+  console.log("        <<<판매 현황표(입력순)>>>      ");
+  console.log("품목명           단가     판매수량     판매금액");
+  for(items of item){
+    console.log(`${items.name}      \t${items.price}        \t${items.sell}   \t${items.sellprice}`);
+  }
+}
+function showName(item){
+  item.sort((a, b) => a.name > b.name);
+  console.log("        <<<판매 현황표(품목순)>>>      ");
+  console.log("품목명           단가     판매수량     판매금액");
+  for(items of item){
+    console.log(`${items.name}      \t${items.price}        \t${items.sell}   \t${items.sellprice}`);
+  }
+}
+function showSellprice(item){
+  item.sort((a, b) => a.sellprice < b.sellprice);
+  console.log("        <<<판매 현황표(판매금액순)>>>      ");
+  console.log("품목명           단가     판매수량     판매금액");
+  for(items of item){
+    console.log(`${items.name}      \t${items.price}        \t${items.sell}   \t${items.sellprice}`);
+  }
+}
+sellprice(item);
+showNormal(item);
+showName(item);
+showSellprice(item);
