@@ -248,3 +248,39 @@ let arr20 = [ 4, 6, 16, 36 ];
 console.log( arr20.every( x => x % 2 === 0 ) );
 console.log( arr20.every( x => Number.isInteger( Math.sqrt( x ) ) ) );
 console.log("------------------------------------------------------------------");
+
+let cart = [ { name:"Widget", price:9.95 }, { name:"Gadget", price:22.95 } ];
+console.log( cart );
+let names = cart.map( x => x.name );
+console.log( names );
+let prices = cart.map( x => x.price );
+console.log( prices );
+let discountPrices = prices.map( x => x * 0.8 );
+console.log( discountPrices );
+
+let items = [ "Widget", "Gadget" ];
+let prices2 = [ 9.95, 22.95 ];
+console.log( items );
+console.log( prices2 );
+
+let cart2 = items.map( ( x, i ) => ( { name:x, price:prices2[i] } ) );
+console.log( cart2 );
+console.log("------------------------------------------------------------------");
+
+let cards = [];
+for ( let suit of [ 'H', 'C', 'D', 'S' ]) {
+    for ( let value = 1; value <= 13; ++value ) {
+        cards.push( { suit, value });
+    }
+}
+console.log( cards );
+console.log();
+console.log( cards.filter( c => c.value === 2 ) );
+console.log();
+console.log( cards.filter( c => c.suit === 'D' ) );
+console.log();
+console.log( cards.filter( c => c.value > 10 ) );
+console.log();
+console.log( cards.filter( c => c.value > 10 && c.suit === 'H' ) );
+console.log();
+console.log("------------------------------------------------------------------");
