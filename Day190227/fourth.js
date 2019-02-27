@@ -195,10 +195,56 @@ console.log( arr16.indexOf( o ) );
 console.log( arr16.indexOf( [ 1, 2 ] ) );
 console.log( arr16.indexOf( "9" ) );
 console.log( arr16.indexOf( 9 ) );
-
+console.log();
 console.log( arr16.indexOf( "a", 5 ) );
-console.log( arr16.indexOf( 5, 5 ) );
+console.log( arr16.indexOf( 5, 2 ) );
 console.log( arr16.lastIndexOf( 5, 4 ) );
 console.log( arr16.lastIndexOf( true, 3 ) );
+console.log("------------------------------------------------------------------");
 
+let array = [ 1, 5, 2, 5, 4, 3, 5, 7, 6, 9, 10, 11 ];
+let searchResult1 = [];
+
+function searchIndex(arr, index) {
+    let searchResult = [];
+    let a = arr.indexOf(index);
+    while (a !== -1) {
+        searchResult.push(a);
+        a = arr.indexOf( index , a + 1 );
+    }
+    return searchResult;
+}
+
+console.log(searchIndex(array, 5));
+
+for (let i = 0; i < array.length; i++) {
+    if ( array[i] == 5) {
+        searchResult1.push(i);
+    }
+}
+console.log(searchResult1);
+console.log("------------------------------------------------------------------");
+
+let arr17 = [ {id:5, name: "Judith"}, {id:7, name: "Francis"} ];
+console.log( arr17 );
+
+console.log( arr17.findIndex( o => o.id === 5 ) );
+console.log( arr17.findIndex( o => o.name === "Francis" ) );
+console.log( arr17.findIndex( o => o === 3 ) );
+console.log( arr17.findIndex( o => o.id === 17 ) );
+
+console.log( arr17.find( o => o.id === 5 ) );
+console.log( arr17.find( o => o.id === 2 ) );
+
+let arr18 = [ 1, 17, 16, 5, 4, 16 ,10, 3, 49 ]
+console.log( arr18.find( (x, i) => i > 2 && Number.isInteger( Math.sqrt( x ) ) ) );
+console.log("------------------------------------------------------------------");
+
+let arr19 = [ 5, 7, 12, 15, 17 ];
+console.log( arr19.some( x => x % 2 === 0 ) );
+console.log( arr19.some( x => Number.isInteger( Math.sqrt( x ) ) ) );
+
+let arr20 = [ 4, 6, 16, 36 ];
+console.log( arr20.every( x => x % 2 === 0 ) );
+console.log( arr20.every( x => Number.isInteger( Math.sqrt( x ) ) ) );
 console.log("------------------------------------------------------------------");
