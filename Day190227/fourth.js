@@ -284,3 +284,23 @@ console.log();
 console.log( cards.filter( c => c.value > 10 && c.suit === 'H' ) );
 console.log();
 console.log("------------------------------------------------------------------");
+
+let arr21 = [ 5, 7, 2, 4 ];
+let sum = arr21.reduce( ( a, x ) => a+=x, 0 );
+console.log( arr21 );
+console.log( sum );
+
+let words = [ "BeachBall", "Rodeo", "Angel", "Avrdvark",
+              "Xylophone", "November", "Chocolate" ];
+let alphaetical = words.reduce( ( a, x ) => {
+      if( !a[x[0]] ) a[x[0]] = [];
+      a[x[0]].push(x);
+      return a;
+}, {} );
+
+console.log( words );
+console.log( alphaetical );
+
+let longWords = words.reduce( ( a, w ) => w.length > 6 ? a + " " + w : a, "").trim();
+console.log( longWords );
+console.log("------------------------------------------------------------------");
