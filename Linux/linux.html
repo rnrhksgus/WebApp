@@ -241,6 +241,42 @@
                         이 문서 내용의 대부분은 인터넷상에서 기술을 구현함에 있어서 요구되는 상세한 절차와 기본 툴을 제공한다.</p></dd>
                 </div>
 
+                <div id="yum">
+                    <dt><h3>YUM (Yellowdog Updater, Modified)</h3></dt>
+                    <dd><p>rpm기반의 시스템에서 패키지를 손쉽게 설치해 주고 자동으로 업데이트를 수행하는 명령행 기반의 유틸리티이다.
+                        특히 rpm 패키지 설치 시에 가장 많이 발생하는 의존성 문제를 자동으로 해결해 준다.</p></dd>
+                    <dd><p>yum command(명령)</p></dd>
+                    <table border="1" style="width:778px">
+                        <thead>
+                            <tr>
+                                <th>명령</th>
+                                <th>내용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>yum list 패키지명</td>
+                                <td class="left">패키지 목록</td>
+                            </tr>
+                            <tr>
+                                <td>yum install 패키지명</td>
+                                <td class="left">패키지 설치</td>
+                            </tr>
+                            <tr>
+                                <td>yum remove 패키지명</td>
+                                <td class="left">패키지 삭제</td>
+                            </tr>
+                            <tr>
+                                <td>yum update 패키지명</td>
+                                <td class="left">패키지 업데이트</td>
+                            </tr>
+                            <tr>
+                                <td>yum search string</td>
+                                <td class="left">패키지명 및 description에 "string"이 들어간 패키지 출력</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div id="process_signal">
                     <dt><h3>시그널(Signal)</h3></dt>
                     <dd><p>프로세스끼리 서로 통신할 때 사용한다. 즉 특정 프로세스가 다른 프로세스에게 메시지를 보낼 때 시그널을 이용한다.
