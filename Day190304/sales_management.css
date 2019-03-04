@@ -3,3 +3,15 @@ table {
     border-collapse: collapse;
     text-align: center;
 }
+
+#sortTable1 {
+    display: table;
+}
+
+#sortTable2 {
+    display: none;
+}
+
+#sortTable3 {
+    display: none;
+}

@@ -32,7 +32,17 @@
                 </tr>
             </tbody>
         </table>
+        <table id="productTable" width="700px" border="1">
+            <thead>
+                <tr>
+                    <th>품목명</th>
+                    <th>판매단가</th>
+                </tr>
+            </thead>
+            <tbody>
 
+            </tbody>
+        </table>
 
         <h2>판매 정보 입력</h2>
         <table>
@@ -54,40 +64,47 @@
             </tbody>
         </table>
 
-        <h2>성적 일람표</h2>
+        <h2>판매 현황표</h2>
         <form name="sortScore">
-            <p> 이름 : <input type="text" name="name" id="myInput" value="" onkeyup="searchStudent()"></p>
+            <p> 이름 : <input type="text" name="name" id="myInput" value="" onkeyup="searchProduct()"></p>
             <input type="radio" name="sort" value="" onclick="tableDisplay()" checked> 입력순
-            <input type="radio" name="sort" value="" onclick="tableDisplay()"> 평균순
+            <input type="radio" name="sort" value="" onclick="tableDisplay()"> 품목명순
+            <input type="radio" name="sort" value="" onclick="tableDisplay()"> 매출액순
         </form>
-        <table border="1"width="900px;" id="table">
+        <table border="1"width="900px;" id="sortTable1">
             <thead>
                 <tr>
-                    <th>이름</th>
-                    <th>국어</th>
-                    <th>영어</th>
-                    <th>수학</th>
-                    <th>총점</th>
-                    <th>평균</th>
+                    <th>품목명</th>
+                    <th>단가</th>
+                    <th>판매수량</th>
+                    <th>판매금액</th>
                 </tr>
             </thead>
             <tbody>
-
             </tbody>
         </table>
-        <table border="1"width="900px;" id="sortTable">
+        <table border="1"width="900px;" id="sortTable2">
             <thead>
                 <tr>
-                    <th>이름</th>
-                    <th>국어</th>
-                    <th>영어</th>
-                    <th>수학</th>
-                    <th>총점</th>
-                    <th>평균</th>
+                    <th>품목명</th>
+                    <th>단가</th>
+                    <th>판매수량</th>
+                    <th>판매금액</th>
                 </tr>
             </thead>
             <tbody>
-
+            </tbody>
+        </table>
+        <table border="1"width="900px;" id="sortTable3">
+            <thead>
+                <tr>
+                    <th>품목명</th>
+                    <th>단가</th>
+                    <th>판매수량</th>
+                    <th>판매금액</th>
+                </tr>
+            </thead>
+            <tbody>
             </tbody>
         </table>
     </body>
