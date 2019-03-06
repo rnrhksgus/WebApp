@@ -2,14 +2,130 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Simple hTML - JQuery</title>
+        <title>Simple HTML - JQuery</title>
+        <style>
+            div { border: 1px solid black; }
+            .print { margin-top: 10px; height: 50px}
+        </style>
     </head>
     <body>
         <header>
             <h1>Simple hTML - JQuery</h1>
         </header>
+        <div id="mouse">AREA(DIV) MOUSE : <br>
+            <span id="resultenter"></span><br>
+            <span id="resultleave"></span>
+        </div>
+        <div>
+            <input type="text"id="txtText"><br>
+            <input type="text"id="txtKeycode">
+        </div>
+        <div class="print"></div>
+        <div>
+            <input type="button" id="btnAdd" value="Add list element">
+            <input type="button" id="btnDie" value="Event Die">
+            <ul>
+                <li>list item 0</li>
+            </ul>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
+        <script>
+            let countenter = 0;
+            let countleave = 0;
+            $(document).ready(function(){
+                $('#btnDie').click(function(){
+                    $('li').die();
+                });
+
+                $('#btnAdd').click(function(){
+                    $('ul').append( '<li>list item add( ' + $('li').length + ' )</li>' );
+                });
+
+                $('li').live("click", function(){
+                    $(".print").html('<p>' + $(this).text + '</p>')
+                });
+                $("#mouse").bind({
+                    mouseenter: function(){
+                        ++countenter;
+                        $("#resultenter").text(countenter + " countenter");
+                    },
+                    mouseleave: function(){
+                        ++countleave;
+                        $("#resultleave").text(countleave + " countleave");
+                    }
+
+                });
+                // $("#mouse").bind("mouseenter mouseleave", function(e){
+                //     if ( e.type === 'mouseenter'){
+                //         ++countenter;
+                //         $("#resultenter").text(countenter + " countenter");
+                //     } else {
+                //         ++countleave;
+                //         $("#resultleave").text(countleave + " countleave");
+                //     }
+                // });
+                $("#txtText").keydown(function(e){
+                    $("#txtKeycode").val( e.keyCode );
+                });
+                $("h1").click(function(){
+                    $("div").html( "<p>Event : click</p>" );
+                });
+                $("h1").hover(function(){
+                    $( this ).css({background: 'red', color: 'white'});
+                }, function(){
+                    $( this ).css({background: '', color: ''});
+                });
+            });
+        </script>
+    </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Simple hTML - JQuery</title>
+        <style>
+            .bdiv {
+                width: 60px;
+                height: 60px;
+                margin: 5px;
+                float: left;
+            }
+            p {
+                color: blue;
+                width: 200px;
+                font-size: 14px;
+            }
+
+            .cdiv {
+                width: 20px;
+                height: 15px;
+                background-color: #f33;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Simple hTML - JQuery</h1>
+        </header>
+
+        <span id="result">&nbsp;</span>
+        <div class="bdiv" style="background-color:blue;"></div>
+        <div class="bdiv" style="background-color:rgb(15,99,30);"></div>
+        <div class="bdiv" style="background-color:#123456;"></div>
+        <div class="bdiv" style="background-color:#f11;"></div>
+
+        <p>Just roll the mouse over me.</p>
+        <p>Or me to see a color change.</p>
+
+        <div class="cdiv">click</div>
+        <div class="cdiv">click</div>
+
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
         <script src="simplejquery2.js"></script>
     </body>
-</html>
+</html> -->
