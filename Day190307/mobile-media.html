@@ -3,10 +3,27 @@
     <head>
         <meta charset="utf-8">
         <title>Media Query</title>
-        <meta name="viewport" content="width-device-width; initial-scale=1.0">
+        <meta name="viewport" content="width-device-width; initial-scale=1.0" />
         <style>
+            @meda only screen and ( max-width:320px ){
+                * { background: limegreen; color: white; }
+            }
+
+            @meda only screen and ( max-width:321px ) and (orientation: portrait) {
+                * { background: lightyellow; color: black; }
+            }
+
+            @meda only screen and ( max-width:321px ) and (orientation: landscape) {
+                * { background: purple; color: white; }
+            }
+
+
             @media screen { *{ font-family: serif; font-size: 24px; border:1px solid red;} }
+
             @media print { *{ font-family: sans-serif; font-size: 8px; } }
+
+            h1 { font-size: 48px; }
+            h2 { font-size: 24px; }
         </style>
     </head>
     <body>
