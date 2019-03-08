@@ -1,0 +1,37 @@
+/* 스타일 초기화 */
+* { margin: 0px ; padding: 0px ; }
+header, body, footer { font-size: 14px; font-family: 나눔고딕,굴림,돋음,'Times New Roman',serif; width: 100%; }
+header, footer { text-align : center ; }
+body { margin: auto; }
+footer { position: fixed; bottom: 0px; }
+
+/* 공통 스타일 */
+h1 { padding: 15px; font-size: 30px ; color: white; }
+h2 { font-size: 15px; color: white; }
+h3 { margin: 10px; font-size: 15px; color: green; text-shadow: 4px 4px 7px green; }
+
+img { border: 0; padding: 2px; }
+
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+	section { width: 80%; float: left; }
+	aside { width: 20%; text-align: center; float: right; }
+	footer { clear: both; }
+}
+
+.content  { margin-top : 100px auto ; clear: both; }
+.section1 ul li { list-style-position: inside; list-style-image: url("li.jpg"); }
+
+
+#stu-pic { width: 6em; height: 8em; float: left; }
+#year-table { table-layout: auto; width: 80%; border-collapse: seperate; }
+#year-table thead { background: #E4F2D0; }
+#logo { position: fixed; top:50%; left: 50%; opacity: 0.1;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+video { margin: 5px; width: 300px; height: 200px; }
+.semi-pic { width: 4em; height: 3em;  }
+#pic-container { overflow: hidden; }

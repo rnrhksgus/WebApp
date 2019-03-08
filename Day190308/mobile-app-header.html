@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Simple HTML - JQuery</title>
-        <meta name="viewport" content="width-device-width; initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.css" />
         <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.js"></script>
@@ -12,7 +12,7 @@
     <body>
         <div data-role="page" id="page1">
             <div data-role="header">
-                <a href="#page1">Page 1</a>
+                <!-- <a href="#page1">home</a> -->
                 <h1>Page Title(Home)</h1>
                 <a href="#page2">Page 2</a>
             </div>
@@ -24,14 +24,13 @@
             </div>
         </div>
         <div data-role="page" id="page2">
-            <div data-role="header">
+            <div data-role="header" data-add-back-btn="true" data-back-btn-text="이전">
                 <a href="#page1">Page 1</a>
                 <h1>Page Title(Page2)</h1>
                 <a href="#page2">Page 2</a>
             </div>
             <div data-role="content">
                 <p>Page content goes here. #2</p>
-                <a href="#page1">Page 1</a>
             </div>
             <div data-role="footer">
                 <h4>Page Footer</h4>
