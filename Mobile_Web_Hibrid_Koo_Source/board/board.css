@@ -1,0 +1,20 @@
+.b_a {
+	text-decoration: none;
+}
+
+#search_select {
+	width: 34%;
+}
+
+#search_keyword {
+	width: 66%;
+}
+
+#search_keyword input {
+	min-height: 1.75em;
+	line-height: 1.75em;
+}
+
+.delete_icon .ui-btn-icon-notext {
+	margin: 0;
+}
