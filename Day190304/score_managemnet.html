@@ -2,75 +2,121 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>성적 처리</title>
-        <link rel="stylesheet" href="score_managemnet.css">
-        <script src="score_managemnet.js"></script>
+        <title>Koo Home Page</title>
+        <base href="../">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="Day190304/score_managemnet.css">
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
+        <script src="main.js"></script>
+        <script src="Day190304/score_managemnet.js"></script>
     </head>
     <body>
-        <p>성적 입력 기능 ( 이름, 3과목 성적 )</p>
-        <p>성적 알람표 출력 ( 입력순, 평균순 ) 기능</p>
-        <p>학생 검색 기능</p>
-        <h1>성적 처리 Web Application 작성</h1><hr>
+        <div id="top">
+            <div id="top_icon">
+                <a href="main.html">Icon KOO</a>
+            </div>
+            <h1 id="top_h1">성적 처리 Web Application 작성</h1>
+        </div>
+        <div id="menu">
+            <a href="Lang/lang.html"><div class="menu_bar">언어</div></a>
+            <a href="Hardware/hardware.html"><div class="menu_bar">하드웨어</div></a>
+            <a href="Web/web.html"><div class="menu_bar">WEB</div></a>
+            <a href="Linux/linux.html"><div class="menu_bar">리눅스</div></a>
+            <a href="Tools/tools.html"><div class="menu_bar">Tools</div></a>
+            <div id="sub_menu">
+                <div class="sub_menu_bar">
+                    <a href="Lang/python.html"><div class="sub_menu_item">Python</div></a>
+                    <a href="Lang/c.html"><div class="sub_menu_item">C언어</div></a>
+                </div>
+                <div class="sub_menu_bar">
+                    <a href="Hardware/raspbarrypi.html"><div class="sub_menu_item">Raspbarry Pi</div></a>
+                    <a href="Hardware/mcu.html"><div class="sub_menu_item">MCU</div></a>
+                    <a href="Hardware/smartcar.html"><div class="sub_menu_item">Smart Car</div></a>
+                </div>
+                <div class="sub_menu_bar">
+                    <a href="Web/html5.html"><div class="sub_menu_item">HTML</div></a>
+                    <a href="Web/css3.html"><div class="sub_menu_item">CSS3</div></a>
+                    <a href="Web/javascript.html"><div class="sub_menu_item">JavaScript</div></a>
+                </div>
+                <div class="sub_menu_bar">
+                    <a href="Linux/linux.html"><div class="sub_menu_item">리눅스</div></a>
+                </div>
+                <div class="sub_menu_bar">
+                    <a href="Tools/use_git.html"><div class="sub_menu_item">git</div></a>
+                    <a href="Tools/reference.html"><div class="sub_menu_item">reference</div></a>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div id="main_left">
+                left
+            </div>
+            <div id="main_right">
+                <h2>성적 입력</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>이름</th>
+                            <th>국어</th>
+                            <th>영어</th>
+                            <th>수학</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <form name="myform">
+                                <td><input type="text" name="name" value=""></td>
+                                <td><input type="text" name="korean_language" value=""></td>
+                                <td><input type="text" name="english" value=""></td>
+                                <td><input type="text" name="math" value=""></td>
+                                <td><button onclick="input_score()" type="button" name="button">입력</button></td>
+                            </form>
+                        </tr>
+                    </tbody>
+                </table>
 
-        <h2>성적 입력</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>이름</th>
-                    <th>국어</th>
-                    <th>영어</th>
-                    <th>수학</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <form name="myform">
-                        <td><input type="text" name="name" value=""></td>
-                        <td><input type="text" name="korean_language" value=""></td>
-                        <td><input type="text" name="english" value=""></td>
-                        <td><input type="text" name="math" value=""></td>
-                        <td><button onclick="input_score()" type="button" name="button">입력</button></td>
-                    </form>
-                </tr>
-            </tbody>
-        </table>
+                <h2>성적 일람표</h2>
+                <form name="sortScore">
+                    <p> 이름 : <input type="text" name="name" id="myInput" value="" onkeyup="searchStudent()"></p>
+                    <input type="radio" name="sort" value="" onclick="tableDisplay()" checked> 입력순
+                    <input type="radio" name="sort" value="" onclick="tableDisplay()"> 평균순
+                </form>
+                <table border="1"width="800px;" id="table">
+                    <thead>
+                        <tr>
+                            <th>이름</th>
+                            <th>국어</th>
+                            <th>영어</th>
+                            <th>수학</th>
+                            <th>총점</th>
+                            <th>평균</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-        <h2>성적 일람표</h2>
-        <form name="sortScore">
-            <p> 이름 : <input type="text" name="name" id="myInput" value="" onkeyup="searchStudent()"></p>
-            <input type="radio" name="sort" value="" onclick="tableDisplay()" checked> 입력순
-            <input type="radio" name="sort" value="" onclick="tableDisplay()"> 평균순
-        </form>
-        <table border="1"width="900px;" id="table">
-            <thead>
-                <tr>
-                    <th>이름</th>
-                    <th>국어</th>
-                    <th>영어</th>
-                    <th>수학</th>
-                    <th>총점</th>
-                    <th>평균</th>
-                </tr>
-            </thead>
-            <tbody>
+                    </tbody>
+                </table>
+                <table border="1"width="800px;" id="sortTable">
+                    <thead>
+                        <tr>
+                            <th>이름</th>
+                            <th>국어</th>
+                            <th>영어</th>
+                            <th>수학</th>
+                            <th>총점</th>
+                            <th>평균</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-            </tbody>
-        </table>
-        <table border="1"width="900px;" id="sortTable">
-            <thead>
-                <tr>
-                    <th>이름</th>
-                    <th>국어</th>
-                    <th>영어</th>
-                    <th>수학</th>
-                    <th>총점</th>
-                    <th>평균</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="bottom">
+            bottom
+        </div>
     </body>
 </html>
