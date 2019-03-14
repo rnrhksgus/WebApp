@@ -4,7 +4,7 @@
 }
         // getPicture() 성공 콜백 함수
         function onPhotoDataSuccess(imageURI) { 
-          $('#imgArea').attr('src', imageURI);      
+          $('#imgArea').attr('src', imageURI);  
           movePic(imageURI);
         }
         // getPicture() 실패 콜백 함수
@@ -14,7 +14,7 @@
 
 // 이미지 문자열 임시 파일을 이동
 function movePic(fileuri){ 
-  window.resolveLocalFileSystemURI(fileuri, resolveOnSuccess, OnError); 
+  window.resolveLocalFileSystemURL(fileuri, resolveOnSuccess, OnError); 
 }
 
 // resolveLocalFileSystemURI() 성공 콜백 함수
@@ -44,9 +44,9 @@ function successMove(fileentry) {
    //이동된 이미지 파일 전체 경로명 표시
    console.log(fileentry.fullPath);
    if (flag == 'enrol'){
-       $('#cafePic1').val(fileentry.fullPath);
+       $('#cafePic1').val(fileentry.toURL());
    } else if (flag == 'modify') {
-       $('#cafePic2').val(fileentry.fullPath);
+       $('#cafePic2').val(fileentry.toURL());
    }   
 }    
 // fileentry.moveTo() 실패 콜백 함수

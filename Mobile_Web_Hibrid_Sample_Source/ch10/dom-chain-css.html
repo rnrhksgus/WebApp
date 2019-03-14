@@ -1,12 +1,12 @@
-<!DOCTYPE html> 
+﻿<!DOCTYPE html> 
 <html>
 <head>	
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>jQuery</title>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <style>
 	body * { margin: 5px; padding: 5px; border: solid thin gray; }	
 	* { font-size: 18px; font-weight: bold; }		
@@ -14,20 +14,20 @@
 <script>
 	$(document).ready(function() {
 		
-		$('div:eq(2)').css('border-width', 'thick');	
-		$('div:eq(2)').find('.class2').css('border-width', 'thick');	
-		$('div:eq(2)').find('.class2').text('노드변경').css('border-width', 'thick');
-		$('div:eq(2)').find('.class2').text('노드변경').append('<h5>노드추가</5>').css('border-width', 'thick');
+		$('div:eq(3)').css('border-width', 'thick');
+		$('div:eq(3)').find('.class2').css('border-width', 'thick');	
+		$('div:eq(3)').find('.class2').text('노드변경').css('border-width', 'thick');
+		$('div:eq(3)').find('.class2').text('노드변경').append('<h5>노드추가</5>').css('border-width', 'thick');	
 	
 	});	
 </script>
 </head>
 <body>	
 <section data-role="page">
-	<section data-role="header">
+	<section data-role="header" data-theme="b">
 		<h1>제이쿼리 선택자</h1>
 	</section>	
-	<div id="div0">div0
+	<section id="div0">div0
 		<div id="div1">div1
 			<span id="span1">span1</span>
 			<span id="span2">span2</span>
@@ -44,6 +44,6 @@
 		<p>p</p>
 		<p></p>
 	</div>
-</section>	
+</div>	
 </body>
 </html>

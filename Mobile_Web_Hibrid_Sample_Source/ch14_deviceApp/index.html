@@ -2,20 +2,20 @@
 <<html>
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>단말기 정보 앱</title>
 
-<!-- 제이쿼리모바일, 제이쿼리, 폰갭 라이브러리 파일(다운로드 방식)  -->     
-<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
-<script src="jquery.mobile/jquery-1.7.2.min"></script>
-<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+<!-- 제이쿼리모바일, 제이쿼리, 폰갭 라이브러리 파일  -->     
+<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css"/>
+<script src="jquery.mobile/jquery-1.11.1.min.js"></script>
+<script src="jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
 <script src="cordova.js"></script>
 
 <!-- 사용자 정의 자바스크립트 파일  -->
 <script src="myDeviceInfo.js"></script>	
 <script> 
 	$(document).ready(function() {   
-		initPhoneGap();			
+		initCordova();			
 		$('#btnDeviceInfo').click(function() {
 			getDeviceInfo();
 		});
@@ -36,29 +36,29 @@
 		});							
 	});	
 	
-   function initPhoneGap() {
+   function initCordova() {
  		document.addEventListener('deviceready', onDeviceReady, true);
 	}   
    function onDeviceReady() {
-		navigator.notification.alert('장치 준비됨', null, '폰갭 API');
-	}	
+		navigator.notification.alert('장치 준비됨', null, '코르도바 API');
+	} 	
 </script>  
 
 </head>
 <body>
 <div data-role="page" id="page1">
-	<div data-role="header" data-position="fixed" >
-		<h1>PhoneGap API</h1>
+	<div data-role="header" data-position="fixed">
+		<h1>Cordova API</h1>
 	</div>	
 	<div data-role="content">		
-		<div class="ui-body ui-body-e"><br/>	
-			<div class="ui-bar ui-bar-d"><h3>단말기 정보 </h3></div>	
+		<div class="ui-body ui-body-a"><br/>	
+			<div class="ui-bar ui-bar-b"><h3>단말기 정보 </h3></div>	
 			<div id="infoArea">		
 				<p>장치 플랫폼 : </p>
 				<p>OS 버전 : </p>
 				<p>장치 이름 : </p>					
 				<p>장치 UUID : </p>
-				<p>폰갭 버전 : </p>	
+				<p>코르도바 버전 : </p>	
 				<p>화면 너비 : </p>
 				<p>화면 높이 : </p>			
 				<p>색상 깊이 : </p>	
@@ -78,11 +78,11 @@
 
 <div data-role="page" id="page2">
 	<div data-role="header" data-position="fixed" >
-		<h1>PhoneGap API</h1>
+		<h1>Cordova API</h1>
 	</div>	
 	<div data-role="content">			
-		<div class="ui-body ui-body-e"><br/>	
-			<div class="ui-bar ui-bar-d"><h3>단말기 장치 제어 </h3></div>	
+		<div class="ui-body ui-body-a"><br/>	
+			<div class="ui-bar ui-bar-b"><h3>단말기 장치 제어 </h3></div>	
 			<div id="resultArea" >	
 				<p></p>		
 			</div>		

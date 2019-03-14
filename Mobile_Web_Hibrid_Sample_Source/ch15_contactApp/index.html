@@ -6,9 +6,9 @@
 <title>연락처 앱</title>
 
 <!-- 제이쿼리모바일, 제이쿼리, 폰갭 라이브러리 파일(다운로드 방식)  -->         
-<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
-<script src="jquery.mobile/jquery-1.7.2.min"></script>
-<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css"/>
+<script src="jquery.mobile/jquery-1.11.1.min.js"></script>
+<script src="jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
 <script src="cordova.js"></script>
 
 <!-- 사용자 정의 자바스크립트 파일  -->
@@ -18,7 +18,7 @@
 
 <script> 
 	$(document).ready(function() {   
-		initPhoneGap();
+		initCordova();
 
 		$('#btnContactAllSearch').click(function() {
 			searchContactsAll();
@@ -31,12 +31,12 @@
 		});			
 	});
 	
-	function initPhoneGap() {
+   function initCordova() {
  		document.addEventListener('deviceready', onDeviceReady, true);
 	}   
    function onDeviceReady() {
-		navigator.notification.alert('장치 준비됨', null, '폰갭 API');
-	}	        
+		navigator.notification.alert('장치 준비됨', null, '코르도바 API');
+	}         
 </script>
 </head>
 <body>
@@ -44,16 +44,16 @@
 // 연락처 검색 시작 화면
 <div data-role="page" id="contactSearchPage">
 	<div data-role="header" data-position="fixed">
-		<h1>PhoneGap API</h1>
+		<h1>Cordova API</h1>
 	</div>	
 	<div data-role="content">
-		<div class="ui-body ui-body-e"><br/>	
-			<div class="ui-bar ui-bar-d"><h3>연락처 전체 검색 </h3></div>	
+		<div class="ui-body ui-body-a"><br/>	
+			<div class="ui-bar ui-bar-b"><h3>연락처 전체 검색 </h3></div>	
             <input type="button" id="btnContactAllSearch" value="검색" />		
 		</div>	
 		<br/>			
-		<div class="ui-body ui-body-e"><br/>	
-			<div class="ui-bar ui-bar-d"><h3>연락처 조건 검색 </h3></div><br/>	
+		<div class="ui-body ui-body-a"><br/>	
+			<div class="ui-bar ui-bar-b"><h3>연락처 조건 검색 </h3></div><br/>	
 	          <label for="editSearch">이름:</label>
 	          <input type="search" id="searchKey" />
 	          <input type="button" id="btnContactSearch" value="검색" />             
@@ -72,7 +72,7 @@
 // 연락처 검색 리스트 화면	
 <div data-role="page" id="contactListShowPage" data-add-back-btn="true" >
 	<div data-role="header"  data-position="fixed">
-		<h1>PhoneGap API</h1>
+		<h1>Cordova API</h1>
 	</div>	
 	<div data-role="content" id="contactListArea">
         <h3>검색결과:</h3>
@@ -91,11 +91,11 @@
 // 연락처 상세 정보 화면	
 <div data-role="page" id="contactInfoShowPage" data-position="fixed" data-add-back-btn="true">
 	<div data-role="header">
-		<h1>PhoneGap API</h1>
+		<h1>Cordova API</h1>
 	</div>	
 	<div data-role="content">		
-		<div class="ui-body ui-body-e"><br/>	
-			<div class="ui-bar ui-bar-d"><h3>연락처 정보 </h3></div>	
+		<div class="ui-body ui-body-a"><br/>	
+			<div class="ui-bar ui-bar-b"><h3>연락처 정보 </h3></div>	
 			<div id="contactInfoArea">		
 				연락처 정보 표시 영역
 			</div>
@@ -114,7 +114,7 @@
 // 연락처 입력 화면
 <div data-role="page" id="contactInputPage" data-position="fixed"  data-add-back-btn="true" >
 	<div data-role="header">
-		<h1>PhoneGap API</h1>
+		<h1>Cordova API</h1>
 	</div>		
 	<div data-role="content">
 		<label for="fullName">이름  : </label>

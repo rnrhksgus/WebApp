@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="initial-scale=1.0, width=device-width">
-<title>도서 관리</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<title>도서 관리</title>
 
 <!-- 제이쿼리 모바일, 제이쿼리 라이브러리 파일 -->
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <!-- 사용자 정의 자바스크립트 파일 -->
 <script src="dbHandle.js"></script>
 <script>
@@ -75,7 +74,7 @@
 
 <!-- 시작 화면 -->
   <div data-role="page" id="page0">
-	<div data-role="header" data-position="fixed">
+	<div data-role="header" data-position="fixed" data-theme="b">
 		<h1>도서 정보 관리</h1>
 		<a href="#page0" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
 	</div>
@@ -88,14 +87,14 @@
 			<li><a href="#page4">전체 도서 조회</a></li>
 		</ul>
 	</div>
-	<div data-role="footer" data-position="fixed">
+	<div data-role="footer" data-position="fixed" data-theme="b">
 		<h4>Book n Book Library</h4>
     </div>
   </div>
 
  <!-- 도서정보 추가 화면 --> 
   <div data-role="page" id="page1">
-	<div data-role="header" data-position="fixed">
+	<div data-role="header" data-position="fixed" data-theme="b">
 		<a href="#" data-icon="back" data-rel="back" data-direction="reverse">Back</a>
 		<h1>도서 정보</h1>
 		<a href="#page0" data-icon="home" data-iconpos="notext">Home</a>
@@ -111,7 +110,7 @@
 	<div data-role="content">
 		<form name="form1">  
 			<h3>도서 내용 입력</h3>
-			<div class="ui-body ui-body-b gap">
+			<div class="ui-body ui-body-a gap">
 				<label for="bookType1" class="select">장르:</label>
 				<select name="bookType1" id="bookType1" data-native-menu="false" data-mini="true" data-inline="true">
 					<option vlaue="미정">미정</option>
@@ -135,14 +134,14 @@
 			</div>
 		</form> 
 	</div>
-	<div data-role="footer" data-position="fixed">
+	<div data-role="footer" data-position="fixed" data-theme="b">
 		<h4>Book n Book Library</h4>
     </div>
   </div>
 
  <!-- 도서정보 갱신 화면 --> 
   <div data-role="page" id="page2">
-	<div data-role="header" data-position="fixed">
+	<div data-role="header" data-position="fixed" data-theme="b">
 		<a href="#" data-icon="back" data-rel="back" data-direction="reverse">Back</a>
 		<h1>도서 정보</h1>
 		<a href="#page0" data-icon="home" data-iconpos="notext">Home</a>
@@ -158,7 +157,7 @@
 	<div data-role="content"> 
 		<form name="form2">  
 			<h3>도서 내용 수정</h3>
-			<div class="ui-body ui-body-b gap">	
+			<div class="ui-body ui-body-a gap">	
 				<label for="sBookName2">검색도서명:</label>
 				<input type="search" name="sBookName2" id="sBookName2" value="" data-mini="true"/>
 				<label for="bookType2" class="select">장르:</label>
@@ -187,14 +186,14 @@
 			</div>
 		</form> 
 	</div>
-	<div data-role="footer" data-position="fixed">
+	<div data-role="footer" data-position="fixed" data-theme="b">
 		<h4>Book n Book Library</h4>
     </div>
   </div>
   
 <!-- 도서정보 삭제 화면 -->
   <div data-role="page" id="page3">
-	<div data-role="header" data-position="fixed">
+	<div data-role="header" data-position="fixed" data-theme="b">
 		<a href="#" data-icon="back" data-rel="back" data-direction="reverse">Back</a>
 		<h1>도서 정보</h1>
 		<a href="#page0" data-icon="home" data-iconpos="notext">Home</a>
@@ -210,7 +209,7 @@
 	<div data-role="content">
 		<form name="form3">  
 			<h3>도서 내용 삭제</h3>
-			<div class="ui-body ui-body-b gap">
+			<div class="ui-body ui-body-a gap">
 				<label for="sBookName3">검색도서명:</label>
 				<input type="search" name="sBookName3" id="sBookName3" value="" data-mini="true" />
 				<label for="bookType3">장르:</label>
@@ -233,14 +232,14 @@
 			</div>
 		</form> 
 	</div>
-	<div data-role="footer" data-position="fixed">
+	<div data-role="footer" data-position="fixed" data-theme="b">
 		<h4>Book n Book Library</h4>
     </div>
   </div>
   
 <!-- 전체 도서조회 화면 -->
   <div data-role="page" id="page4">
-	<div data-role="header" data-position="fixed">
+	<div data-role="header" data-position="fixed" data-theme="b">
 		<a href="#" data-icon="back" data-rel="back" data-direction="reverse">Back</a>
 		<h1>도서 정보</h1>
 		<a href="#page0" data-icon="home" data-iconpos="notext">Home</a>
@@ -255,7 +254,7 @@
 	</div>
 	<div data-role="content">
 		<h3>도서 내용 검색</h3>
-		<div class="ui-body ui-body-b gap">
+		<div class="ui-body ui-body-a gap">
 			<fieldset data-role="controlgroup" data-type="horizontal" style="text-align:right">
             	<input type="button" id="first" value="|<"/>
                 <input type="button" id="prev" value="<"/>
@@ -280,7 +279,7 @@
 			</fieldset>
 		</div>
 	</div>
-	<div data-role="footer" data-position="fixed">
+	<div data-role="footer" data-position="fixed" data-theme="b">
 		<h4>Book n Book Library</h4>
     </div>
   </div>

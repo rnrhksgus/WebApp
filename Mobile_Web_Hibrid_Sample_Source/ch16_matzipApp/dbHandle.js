@@ -109,8 +109,7 @@
         $('#cafeScore2').val(rs.rows.item(0).score).slider('refresh');                   
         $('#cafePhone2').val(rs.rows.item(0).phone);             
         $('#cafeAddress2').val(rs.rows.item(0).address);  
-        $('#cafeMemo2').val(rs.rows.item(0).memo); 
-        $('#cafePic2').val(rs.rows.item(0).pic);   
+        $('#cafeMemo2').val(rs.rows.item(0).memo);  
         varCafeName = rs.rows.item(0).name;   
      });
    });         

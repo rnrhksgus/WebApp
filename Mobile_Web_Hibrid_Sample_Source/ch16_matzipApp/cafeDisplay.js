@@ -7,7 +7,7 @@ function displayCafeInfo(index) {
   varPosition = index;
   
   if(myCafeRecord.name != null) {          // 맛집 이름           
-    name = '<div class="ui-bar ui-bar-d"><h3>' + myCafeRecord.name + '</h3></div>';   
+    name = '<div class="ui-bar ui-bar-a"><h3>' + myCafeRecord.name + '</h3></div>';   
   } else {
       name = '<p>이름 : 정보없음</p>';
   }  
@@ -54,27 +54,8 @@ function getCafePic() {
   $.mobile.changePage("#picShowDialog", "pop", false, true);            
 }  
 
-function getCafeAddressMap() {
-  $.mobile.changePage("#mapShowDialog", "pop", false, true);             
-  var geocoder = new google.maps.Geocoder();
-  var myAddress = recordSet.rows.item(varPosition).address;  
-  geocoder.geocode( {'address': myAddress}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-          var latlng = results[0].geometry.location;
-          $('#mapAddress').text(myAddress);
-          $('#mapArea').gmap('destroy');
-          $('#mapArea').gmap({'center': latlng, 'zoom': 15});    
-          $('#mapArea').gmap('addMarker', {'position': latlng}).click(function() {
-              $('mapArea').gmap('openInfoWindow', {'content' : results[0].formatted_address + '위치'}, this);
-           }); 
-      } else {
-          alert('실패 : ' + status);
-      }
-  });
-}     
-
 function getCafeRouteMap() {
-  var myName = recordSet.rows.item(varPosition).name;     
+  var myName = recordSet.rows.item(varPosition).address;     
   $('#routeName').text(myName);            
   $.mobile.changePage("#routeShowDialog", "pop", false, true);   
   $('#routeArea').gmap('destroy');          

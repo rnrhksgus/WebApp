@@ -5,7 +5,7 @@ function getDeviceInfo() {
         + "<p>OS 버전 : " + device.version + "</p>"
         + "<p>장치 이름 : " + device.name + "</p>"
         + "<p>장치 UUID : " + device.uuid + "</p>"
-        + "<p>폰갭 버전 : " + device.phonegap + "</p>"
+        + "<p>코르도바 버전 : " + device.cordova + "</p>"
         + "<p>화면 너비 : " + screen.width + "</p>"
         + "<p>화면 높이 : " + screen.height + "</p>"
         + "<p>색상 깊이 : " + screen.colorDepth; + "</p>"       
