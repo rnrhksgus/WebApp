@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>jQuery</title>
+
+   <!-- 제이쿼리 모바일, 제이쿼리 라이브러리 파일 -->
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+   <!-- jqPlot 기본 라이브러리 파일 -->
+<link rel="stylesheet" href="jqplot/jquery.jqplot.min.css"/>
+<script src="jqplot/jquery.jqplot.min.js"></script>
+
+   <!-- jqPlot 바차트 플러그인 파일 -->
+<script src="jqplot/plugins/jqplot.barRenderer.min.js"></script>
+   <!-- jqPlot 카테고리(바 표시) 플러그인 파일 -->
+<script src="jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+   <!-- jqPlot x축, y축 라벨 표시 플러그인 파일 -->
+<script src="jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+<script src="jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+   <!-- jqPlot 포인트 라벨 표시 플러그인 파일 -->
+<script src="jqplot/plugins/jqplot.pointLabels.min.js"></script>
+<script src="sales.js"></script>
+
+</head>
+<body>
+    <div data-role="page" id="page1">
+        <div data-role="header">
+            <h1>판매 관리</h1>
+        </div>
+        <div data-role="content">
+            <button data-icon="plus" data-inline="ture" id="p_b_add_1">품목 등록</button>
+            <table class="ui-responsive table-stripe" data-mode="column" data-role="table" id="p_info_1">
+                <thead>
+                    <tr>
+                        <th>품목명</th>
+                        <th>판매 단가</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table><br>
+
+            <button data-icon="plus" data-inline="ture" id="ps_b_add_1">판매 품목 등록</button>
+            <button data-icon="eye" data-inline="ture" id="ps_b_graph">판매 품목 그래프</button>
+            <table class="ui-responsive table-stripe" data-mode="column" data-role="table" id="ps_info_1">
+                <thead>
+                    <tr>
+                        <th>품목명</th>
+                        <th>판매 단가</th>
+                        <th>판매 수량</th>
+                        <th>판매액</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table><br>
+            <div id="chartdiv" style="height:400px; width:100%;">
+                <!-- 차트 표시 영역 -->
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>footer영역</h4>
+        </div>
+    </div>
+
+    <div data-role="page" id="page2">
+        <div data-role="header">
+            <h1>품목 등록</h1>
+        </div>
+        <div data-role="content">
+            <table class="ui-responsive table-stripe" data-mode="column" data-role="table" id="p_info_2">
+                <thead>
+                    <tr>
+                        <th>품목명</th>
+                        <th>판매 단가</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table><br>
+            <input type="text" name="p_name" id="p_name" placeholder="물품명을 입력하세요">
+            <input type="text" name="p_price" id="p_price" placeholder="판매 단가를 입력하세요">
+            <button data-icon="plus" data-inline="ture" id="p_b_add_2">등록</button>
+            <button data-icon="edit" data-inline="ture" id="p_b_modify">수정</button>
+            <button data-icon="home" data-inline="ture" id="p_b_finish">등록 완료</button>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>footer영역</h4>
+        </div>
+    </div>
+
+    <div data-role="page" id="page3">
+        <div data-role="header">
+            <h1>판매 품목 등록</h1>
+        </div>
+        <div data-role="content">
+            <table class="ui-responsive table-stripe" data-mode="column" data-role="table" id="ps_info_2">
+                <thead>
+                    <tr>
+                        <th>품목명</th>
+                        <th>판매 단가</th>
+                        <th>판매 수량</th>
+                        <th>판매액</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table><br>
+
+            <input type="text" name="s_name" id="s_name" placeholder="물품명을 입력하세요">
+            <input type="text" name="s_num" id="s_num" placeholder="판매 수량을 입력하세요">
+            <button data-icon="plus" data-inline="ture" id="ps_b_add_2">판매 품목 등록</button>
+            <button data-icon="plus" data-inline="ture" id="ps_b_finish">품목 등록 완료</button>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>footer영역</h4>
+        </div>
+    </div>
+</body>
+</html>

@@ -6,9 +6,9 @@
 <title>jQuery</title>
 
    <!-- 제이쿼리 모바일, 제이쿼리 라이브러리 파일 -->
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
    <!-- jqPlot 기본 라이브러리 파일 -->
 <link rel="stylesheet" href="jqplot/jquery.jqplot.min.css"/>
@@ -21,21 +21,21 @@
 <script>
   $(document).ready(function(){
 	  var plot1 = $.jqplot ('chartdiv', [[3,7,9,1,5,3,8,2,5]], {
-	      title: '선 그래프 예제', 
-	      axesDefaults: {  
-	        labelRenderer: $.jqplot.CanvasAxisLabelRenderer  
+	      title: '선 그래프 예제',
+	      axesDefaults: {
+	        labelRenderer: $.jqplot.CanvasAxisLabelRenderer
 	      },
-	      axes: {  
-	        xaxis: { 
+	      axes: {
+	        xaxis: {
 	          label: "X 축"
 	        },
-	        yaxis: { 
+	        yaxis: {
 	          label: "Y 축"
 	        }
 	      }
-	  });   	
+	  });
   });
-</script>                            
+</script>
 </head>
 <body>
 <div data-role="page">
